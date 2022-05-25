@@ -1,5 +1,5 @@
 def driver(N, arr):
-    arr = arr[::-1]
+    arr.sort()
     return " ".join([str(x) for x in arr])
 
 def main():
