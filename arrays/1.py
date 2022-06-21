@@ -3,7 +3,7 @@ def driver(N, arr):
 
 def main():
     N = int(input())
-    arr = list(map(int, input().split()))
+    arr = list(map(int, raw_input().split()))
     print(driver(N, arr))
 
 main()
