@@ -1,3 +1,17 @@
+/**
+ * You have been given a string in ascending order where each character is
+ * exactly repeated twice except for one. You need to find the index of that
+ * non-repeated character in time complexity of O(log n)
+ * Example input 1:
+ * AABBCCDEEFFGGHH
+ * Output 1:
+ * 6
+ * 
+ * Example input 2:
+ * ABBCCDD
+ * Output 2:
+ * 0
+ */
 function binarySearch(str, l, r){
     var mid = Math.floor((l + r) / 2)
     if(str[mid] != str[mid - 1] && str[mid] != str[mid + 1]) return mid
