@@ -1,0 +1,1379 @@
+<-- <!-- <!-- <!-- <!-- <!-- <!-- Range Sum Query 2.0 
+
+RANGE SUM QUERY 2.0
+
+Problem Statement
+
+Amy has an array A of R-L+1 integers such that A1 = L, A2 = L+1, …. , AR-L+1 = R.
+
+Anne gives her Q queries. Each query consists of two integers X and Y. Anne wants Amy to check if there exists at least one subsequence in A, such that the sum of subsequence lies between X and Y (both inclusive).
+
+You are given T independent test cases.
+
+NOTE: Subsequence of an array can be obtained by erasing some (possibly zero) elements from the array. You can erase any elements, not necessarily going successively. The remaining elements preserve their order.
+
+Constraints
+
+1 <= T <= 3
+1 <= Q <= 10^5
+1 <= L <= R <= 10^9
+1 <= X<= Y <= 10^18
+All input values are integers.
+Input Format
+
+First-line contains T.
+First line of each test case consists of a three space separated integers integer Q, L and R.
+Next Q lines of each test case consists of two space separated integers X and Y.
+Output Format
+
+Print in a newline for each query: 1 if there exists a required subsequence otherwise print 0.
+Sample Input 1
+
+1
+
+2 1 3
+
+6 7
+
+9 9
+
+Sample Output 1
+
+1
+
+0
+
+Explanation of Sample 1
+
+For the first query, subsequence S = { A1, A2, A3} has sum 6 (A1+A2+A3 = 1+2+3 = 6). So, there is one possible subsequence whose sum lies between X = 6 and Y = 7.
+
+For 2nd query, there is no possible subsequence.
+
+ 
+
+
+
+////////////////////////////////////////Q.2.
+Longest Good Array 1.0
+LONGEST GOOD ARRAY 1.0
+
+Problem Statement
+
+
+
+Amy has an array A of length N. We define PK (1<=K<=N) as prefix sum of array up to Kth element, i.e., PK = A1 + A2 + …. + AK.
+
+She calls an array “good”, if for each K (1<=K<=N) PK + Y*AK = X.
+
+For given positive integers X and Y, Amy wants to know the length of the longest good array that exists. If no such good array exists print 0.
+
+You are given T independent test cases.
+
+
+
+Constraints
+
+
+
+1 <= T <= 104
+1 <= X, Y <= 109
+All input values are integers.
+
+
+Input Format
+
+
+
+First-line contains T.
+Next T lines each contains two space separated integers X and Y.
+
+
+Output Format
+
+
+
+Print in a newline for each test case a single integer denoting the length of the longest good array that exists. If no such good array exists print 0.
+
+
+Sample Input 1
+
+
+
+1
+
+4 1
+
+
+
+Sample Output 1
+
+
+
+2
+
+
+
+Explanation of Sample 1
+(
+
+
+A = [2, 1]
+
+P1 = 2, P2 = 3
+
+P1 + 1*A1 = 2 + 2 = 4 and P2 + 1*A2 = 3 + 1 = 4
+
+
+
+
+
+ 
+//////////////////////////////////////Q.3//////////
+You are given an array A of N elements composed only of 1s and 0s.
+
+There is a machine that does the following operations on the array in one second:
+
+· Swap Ai and Ai+1 for i (1<=i<N) such that Ai = 1 and Ai+1 = 0
+
+For, example, if A = [ 0, 1, 0, 0, 1 ,0, 1, 0] and N= 8 then in one second the machine will convert the array into A = [0, 0, 1, 0, 0 ,1, 0, 1]. (Here i = 2, 5, 7)
+
+Find the minimum time required to sort the array using the machine.
+
+ 
+
+Constraints
+
+ 
+
+1 <= T <= 10
+1 <= N <= 10^5
+0 <= Ai <= 1
+All input values are integers.
+ 
+
+Input Format
+
+ 
+
+First-line contains T.
+First line of each test case consists of a single integer N.
+Second line of each test case consists of N space separated integers denoting the array A.
+ 
+
+Output Format
+
+ 
+
+Print in a newline for each test case a single integer denoting the minimum time required to sort the array using the machine.
+ 
+
+Sample Input 1
+
+ 
+
+2
+
+3
+
+1 0 0
+
+2
+
+0 1
+
+ 
+
+Sample Output 1
+
+ 
+
+2
+
+0
+
+ 
+
+Explanation of Sample 1
+
+ 
+
+For the 1st test case,
+
+A = [1, 0, 0]
+
+In first second machine converts array to A = [ 0, 1, 0]
+
+In next second machine converts array to A = [ 0, 0, 1]
+
+Array has become sorted.
+
+For 2nd test case, array is already sorted.
+
+ 
+
+
+/////////////////////////Q.4///////////////////////////
+Question Name: Number of Arrays
+
+
+
+Problem Statement
+
+
+
+Alice has an integer Array A of N size. Now he challenges Bob to find the number of arrays B, satisfying the given conditions:
+
+The length of array B = length of array A
+1 <= B[i] <= A[i] (1<= i <= N)
+B[i] != B[j] (1 <= i < j <= N)
+Since the answer can be very large, print the answer modulo 109 + 7.
+
+
+
+Input Format
+
+
+
+First line contains one integer N.
+Second line contains N integers, denoting the array A.
+
+
+Output Format
+
+
+
+Output the number of arrays B modulo 109 + 7.
+
+
+Constraints
+
+
+
+1 <= N <= 2*105
+1 <= A[i] <= 109
+
+
+Sample Input 1
+
+
+
+2
+
+2 3
+
+
+
+Sample Output 1
+
+
+
+4
+
+
+
+Explanation of Sample 1
+
+
+
+The 4 Arrays, are as follows:
+
+B = [1,2]
+
+B = [1,3]
+
+B = [2,3]
+
+B = [2,1]
+
+
+
+
+////////////////////////////Q..5/////////// -->
+Modulating the array
+MODULATING THE ARRAY
+
+
+
+Problem Statement
+
+
+
+Amy has an array A, of N integers. She also has an integer K, such that 0 <= K <= MIN (A1, A2, …, AN). Here MIN denotes the Minimum of the array.
+
+She wants to “modulate” the array with positive integer M. “Modulating” an array with M, for each i between 1 to N, she converts Ai = (Ai – K) % M.
+
+For example, if N = 3, K = 1 and A = [ 2, 5, 3] then after modulating the array with M = 2 it becomes A = [ 1, 0, 0].
+
+She was given Q queries. In each query she has index of the array A, X and Y (1<=X, Y<=N, X may be equal to Y) and is ask to find how many positive values of M exists such that after modulating the array with M, AX becomes equal to AY. If infinite such values of M exists print -1.
+
+Since she is busy in her job interview, she asks you to help her answer the queries.
+
+
+
+NOTE: Queries are independent of each other.
+
+
+
+Constraints
+
+
+
+1 <= N <= 105
+1 <= Ai <= 109
+0 <= K <= MIN (A1, A2, …, AN)
+1 <= Q <= 50
+1 <= X, Y <= N
+All input values are integers.
+
+
+Input Format
+
+
+
+First-line contains three space separated integers N, K and Q.
+Second line contains N space separated integers denoting the array A.
+Next Q lines each contains two space separated integers X and Y.
+
+
+Output Format
+
+Print in a newline for each query a single integer denoting how many positive values of M exists such that after modulating the array with M, AX becomes equal to AY. If infinite such values of M exists print -1.
+
+
+Sample Input 1
+
+
+
+3 1 2
+
+2 5 3
+
+2 3
+
+1 1
+
+
+
+Sample Output 1
+
+
+
+2
+
+-1
+
+
+
+Explanation of Sample 1
+
+
+
+For 1st query M = 1, 2 are possible values. Considering M = 1, A = [ 0, 0, 0], M = 2 is shown in the statement.
+
+
+
+
+
+//////////////////////Q.6/////////////////
+
+Uniqueness
+
+Problem Statement
+
+ 
+
+You are given an array A, of N integers. In one operation you can:
+
+· Selects the maximum element, MX, of the array, if there are multiple such elements the she can select any one of them.
+
+· Then she removes the selected element and subtracts MX from each of the remaining element of the array.
+
+After each operation size of the array decreases by 1. Find the minimum number of operations, K, required to make all the elements of array unique. Also find the minimum element of the array after exactly K operations.
+
+You are given T independent test cases.
+
+ 
+
+Constraints
+
+ 
+
+1 <= T <= 10
+1 <= N <= 10^5
+-10^9 <= Ai <= 10^9
+All input values are integers.
+ 
+
+Input Format
+
+ 
+
+First-line contains T.
+First line of each test case consists of a single integer N.
+Second line of each test case consists of N space separated integers denoting the array A.
+ 
+
+Output Format
+
+ 
+
+Print in a newline for each test case two space integers denoting the minimum number of operations, K, required to make all the elements of array unique and the minimum element of the array after exactly K operations.
+
+ 
+
+Sample Input 1
+
+ 
+
+2
+
+4
+
+6 -1 2 6
+
+3
+
+-1 2 3
+
+ 
+
+Sample Output 1
+
+ 
+
+1 -7
+
+0 -1
+
+ 
+
+Explanation of Sample 1
+
+ 
+
+For 1st test case, she chooses MX = 6 and, So, array becomes: A = [-1-6, 2-6,6-6] = [ -7, -4, 0]. All the elements of array are unique and minimum element of the array is -7.
+
+In 2nd test case, all elements are already unique.
+
+ 
+
+
+
+
+//////////////////Q.7////////////////
+ -->
+Problem Statement
+
+Antonio got an array A consisting of N integers as his christmas present.
+
+Antonio likes an array if and only if the sum of all elements of that array is odd. Like Antonio likes arrays [4,1,4], [2,2,1] etc. but not arrays [4,4], [2,6,2] etc.
+
+Now to make array A of his likeness he can perform the belows operations on it :
+
+Operation 1:
+Remove exactly one element from the array.
+Operation 2:
+Divide every element of the array by 2.
+Given array A, print the minimum number of above operations required to make array A of Antonio’s likeness(i.e. To make the sum of all elements of array A odd).
+
+Input Format
+
+First line contains a single integer denoting N.
+Next line contains N space separated integers denoting the elements of array A.
+Output Format
+
+Print the minimum number of above operations required to make array A of Antonio’s likeness(i.e. To make the sum of all elements of array A odd).
+Constraints
+
+1<=N<=105
+1<=Ai<=109
+Sample Input 1
+
+3
+
+6 4 10
+
+Sample Output 1
+
+2
+
+Explanation of Sample 1
+
+One can perform the operations as :
+
+First perform operation 1 and remove the first element of the array. Array A becomes = [4 10].
+Then perform the second operation and divide each element of the array by 2. A becomes = [2 5].
+Now Antonio likes array [2 5] because the sum of all elements of this array is 7, which is odd.
+
+
+
+
+
+/////////////////////////Q.8///////////
+ Question Name: Optimal division
+Problem Statement
+Antonio and his girlfriend decided to move their relationship to the next level and bought an array from a nearby arrays shop(name of the shop). As you may have already guessed, both of them are programmers.
+
+They define the value of an array as the number of unique elements it has. Like value of array [1,2,1,2,2,3] = 3 as it has 3 unique elements(1,2 and 3), value of array [1,2,3,4] = 4 and so on.
+
+After a few days, their relationship went through a tough phase and they decided to break up with each other. While breaking up they also decided to break up the bought array among themselves.
+
+To break up the array, they decided to split the elements of the array among themselves such that the total value of the final arrays they receive is as maximum as possible.
+
+For this, they went to a nearby relationship counselor(you). Given the array, Antonio and his girlfriend bought, print the maximum possible total value of the final arrays they can achieve if they divide the elements of the bought array optimally.
+
+Note :
+
+It may be possible that one of them does not receive any element of the bought array.
+
+
+Input Format
+
+
+
+First line contains a single integer denoting N.
+Next line contains N space separated integers denoting the elements of the bought array.
+
+
+Output Format
+
+
+
+Print the maximum possible total value of the final arrays Antonio and his girlfriend can achieve if they divide the elements of the bought array optimally.
+
+
+Constraints
+
+
+
+1<=N<=105
+1<= element of the array<=109
+
+
+Sample Input 1
+
+
+
+6
+
+1 2 1 2 2 3
+
+
+
+Sample Output 1
+
+
+
+5
+
+
+
+Explanation of Sample 1
+
+
+
+They can divide the array elements as :
+
+Antonio receives the 1st, 4th and 5th elements of the array.
+His girlfriend receives rest of the elements i.e. 2nd, 3rd, and 6th.
+Value of array Antonio receives = value of array [1,2,2] = 2
+
+Value of array his girlfriend receives = value of array [2,1,3] = 3
+
+Hence total value = 2+3 = 5. It can be proved that this is the maximum possible value.
+
+
+
+//////////////////////////////////Q.9////////////
+COOL EVALUATION
+Problem Statement
+A number K is called “cool” it can be represented in form of 3*x*y + 2*x + y, where x and y are positive integers.
+
+Amy asked each of her N students to write any number on a paper. You are given an array A of length N, where Ai denotes the number, ith student has written. Help Amy to find how many students wrote a “cool” number.
+
+You are given T independent test cases.
+
+
+
+Constraints
+
+
+
+1 <= T <= 10
+1 <= N <= 40
+1 <= Ai <= 103
+All input values are integers.
+
+
+Input Format
+
+
+
+First-line contains T.
+First line of each test case consists a single integer N.
+Second line of each test case consists of N space separated integers denoting the array A.
+
+
+Output Format
+
+
+
+Print in a newline for each test case a single integer denoting the count of students who wrote a “cool” number.
+
+
+Sample Input 1
+
+
+
+1
+
+5
+
+3 6 2 4 6
+
+
+
+Sample Output 1
+
+
+
+2
+
+
+
+Explanation of Sample 1
+
+
+
+Student numbered 2 and 5 wrote a “cool” number. When x = and y = 1, K = 3*1*1 + 2*1 + 1 = 6 (COOL NUMBER).
+
+
+
+///////////////////////Q.10//////////////////
+Problem Statement
+
+Antonio has an array A consisting of N integers.
+
+An array B is a prefix of array A if B can be formed by deleting several(possibly zero but not all) elements from the end of array A. Like for array A = [5,1,4,2], the prefixes are A1..1 = [5], A1..2 = [5,1], A1..3 = [5,1,4], A1..4 = [5,1,4,2].
+
+A prefix is considered good if the sum of its elements is an odd number. Like for A = [5,1,4,2], A1..1 and A1..4 are the good prefixes.
+
+Now, Antonio wants to rearrange the elements of array A such that there are a maximum number of good prefixes in final array A.
+
+Given array A, print the maximum number of good prefixes Antonio can get in final array A.
+
+Input Format
+
+First line contains a single integer denoting N.
+Next line contains N space separated integers denoting the elements of array A.
+Output Format
+
+First print the maximum number of good prefixes Antonio can get in final array A.
+Constraints
+
+1<=N<=105
+1<=Ai<=105
+Sample Input 1
+
+3
+
+4 3 6
+
+Sample Output 1
+
+3
+
+Explanation of Sample 1
+
+Rearrange the elements of array A as [3,4,6]
+
+Sum of elements in prefix A1..1 = 3
+
+Sum of elements in prefix A1..2 = 3+4 = 7
+
+Sum of elements in prefix A1..3 = 3+4+6 = 13
+
+Hence it is possible to rearrange the elements of the given array such that all its three prefixes are good.
+
+
+
+
+///////////Q.10//////////
+Problem Statement
+
+Given an array A consisting of N integers.
+
+A subsequence is a sequence that can be derived from the given array by deleting zero or more elements(not all) without changing the order of the remaining elements.
+
+A nice subsequence is a subsequence of array A in which the difference between any two elements equals the difference between their original indices in array A.
+
+More formally a subsequence [Ai1 Ai2 Ai3 … AiL] of array A is nice if for any 1<=p,q<=L, Aip-Aiq = ip-iq holds.
+
+Now you have to find the largest possible length of a nice subsequence of array A.
+
+ 
+
+Input Format
+
+First line contains a single integer denoting N.
+Next line contains N space separated integers denoting the elements of array A.
+ 
+
+Output Format
+
+Print the largest possible length of a nice subsequence of array A.
+ 
+
+Constraints
+
+1<=N<=10^5
+1<=Ai<=10^9
+ 
+
+Sample Input 1
+
+6
+
+2 1 4 10 7 7
+
+ 
+
+Sample Output 1
+
+3
+
+ 
+
+Explanation of Sample 1
+
+A possible nice subsequence of length 3 is [A1 A3 A6] = [2 4 7]
+
+ 
+
+//////Q.11//////////////////
+Given array A, help Antonio in finding the number of good elements in the array.
+
+
+
+Input Format
+
+
+
+First line contains a single integer N denoting the size of array A.
+Next line contains N space separated integers denoting the elements of array A.
+
+
+Output Format
+
+
+
+Prin the number of good elements in the array.
+
+
+Constraints
+
+
+
+1<=N<=105
+1<=Ai<=109
+
+
+Sample Input 1
+
+
+
+3
+
+2 2 4
+
+
+
+Sample Output 1
+
+
+
+2
+
+
+
+Explanation of Sample 1
+
+
+
+The first element and second elements are good elements as. 2 divides the first element of the array. 2 divides the second element of the array. And 2 divides the third element of the array.
+
+The third element is not good because 4 is not divisible by 2. -->
+
+
+
+///////////Q.12//////////
+Problem Statement
+Every year in School during the new year time, the teacher conducts an event for the students called New year card to increase the friendship among students.
+
+Student roll numbers from 1 to n take part in the event total n number of students. Each Student i is assigned a different Student Si, to which Student i has to make a new year greeting card. Each student is assigned to exactly one other Student, and nobody is assigned to themselves. In other words, all Si must be distinct integers between 1 and n, and for any i, Si≠i must hold.
+
+Every year these assignments were done by the teacher but this year due to the covid-19 situation as the teacher was busy with other School work. All the students have been asked to whom they wish to make a card.
+
+Every student (ith) wishes to make a card for jth student. While i!=j , means a student cannot wish to give himself a card,and every student has to wish for exactly 1 out of the n-1 remaining students.
+
+Find a valid assignment S that maximizes the number of fulfilled wishes of the Students.
+
+ 
+
+Input format
+
+ 
+
+The first line of the input gives the number of test cases T to be answered. First-line integer N size of the array
+
+The next line contains N space-separated integers representing the wishes of the students in order 1 to n.
+
+ 
+
+Output format
+
+ 
+
+In each separate line print the maximum number of students whose wishes will be fulfilled.
+
+ 
+
+Constraints:
+
+ 
+
+1<= T<= 1000
+
+1<= N<= 10^5
+
+1<= Array[i] <= N
+
+Sum of N over all the test cases does not exceed 10^5.
+
+ 
+
+SAMPLE INPUT:
+
+ 
+
+1
+
+7
+
+6 4 6 2 4 5 6
+
+ 
+
+SAMPLE OUTPUT:
+
+ 
+
+4
+
+ 
+
+EXPLANATION:
+
+ 
+
+In this permutation, 4 students will be happy which is the maximum there can be other permutations as well but not with more than 4 students will be happy in any order.
+
+One of the permutations can be [6 ,4 ,7, 2 ,3 ,5 ,1] or [3,4,6,2,1,5,7]
+
+ 
+
+///////////Q.13////////////////////
+Question Name: Minimize the integer
+Problem Statement
+Antonio got a very large integer as his christmas present from his parents. Antonio does not like large integers and hence decided to change a few digits of this integer and make it as small as possible.
+
+But changing too many digits will make Antonio’s parents sad. More formally if Antonio changes more than K digits of the integer, his parents will become sad. Antonio does not want that to happen and hence will change at most K digits of the given integer.
+
+Also if the final integer contains any leading zeroes, Antonio’s parents again become sad. So Antonio will perform the K changes in such a way that the final integer does not contain any leading zeroes.
+
+Given the integer Antonio got and K(maximum number of changes Antonio can perform), print the minimum integer that Antonio can get.
+
+
+
+Input Format
+
+
+
+First line contians a single integer denoting the integer Antonio got as his christmas present.
+Next line contains a single integer denoting K.
+
+
+Output Format
+
+
+
+Print the minimum integer that Antonio can get.
+
+
+Constraints
+
+
+
+1<=number of digits in the integer<=105
+1<=K<=number of digits in the integer
+Its guaranteed that the given integer does not contain any leading zeros.
+
+
+Sample Input 1
+
+
+
+2399
+
+2
+
+
+
+Sample Output 1
+
+
+
+1099
+
+
+
+Explanation of Sample 1
+
+
+
+Antonio can change the first digit to ‘1’ and change the second digit to ‘0’. It can be proved that 1099 is the minimum possible integer that Antonio can get.
+
+
+
+
+/////////////Q.14///////////////////////////
+Question Name: Subarray AND
+Problem Statement
+Consider an array A consisting of N positive integers.
+
+An array B is a subarray of an array A if B can be obtained from A by deletion of several (possibly, zero, or all) elements from the beginning and several (possibly, zero, or all) elements from the end. In particular, an array is a subarray of itself.
+
+A nice array is an array satisfying the below condition :
+
+Bitwise AND of any two elements of the array must be zero.
+More formally for any two integers i and j, Bitwise AND of the ith and jth elements of the array must be zero.
+Given array A, print the largest possible length of a nice subarray of array A.
+
+
+
+Input Format
+
+
+
+First line contains a single integer denoting N.
+Next line contains N space separated integers denoting the elements of array A.
+
+
+Output Format
+
+
+
+Print the largest possible length of a nice subarray of array A.
+
+
+Constraints
+
+
+
+1<=N<=2*105
+0 <= Ai< 220
+
+
+Sample Input 1
+
+
+
+5
+
+6 2 4 1 7
+
+
+
+Sample Output 1
+
+
+
+3
+
+
+
+Explanation of Sample 1
+
+
+
+A possible way to choose a 3 length nice subarray is : A2..4 = [2,4,1]
+
+Here 2 AND 4 = 0, 2 AND 1 = 0, 4 AND 1 = 0, hence it is a nice subarray.
+
+
+
+
+A>=B
+A>=B
+
+
+//////////////Q.15/////////////////////////
+Problem Statement
+Amy has an array A, of N integers. Initially all the elements of array are 0, i.e., Ai = 0 (1<=i<=N). She also has an array B of N integers.
+
+In one operation she can chose an index K, (1<=K<=N) and increase each element of array A, by 1 except AK. (1-based indexing).
+
+For example, N = 4, A = [0, 0, 0, 0], she can choose K = 2 and increase all the elements of array except A2. So, the array becomes A = [1, 0, 1,1]
+
+Find minimum number of operations required for her to make each element of array A, greater than corresponding element in array B, i.e., for each i (1<=i<=N) make Ai>=Bi.
+
+You are given T independent test cases.
+
+ 
+
+Constraints
+
+ 
+
+1 <= T <= 5
+3 <= N <= 10^5
+1 <= Bi < = 10^9
+All input values are integers.
+ 
+
+Input Format
+
+ 
+
+First-line contains T.
+First line of each test case consists of a single integer N.
+Second line of each test case consists of N space separated integers denoting the array B.
+ 
+
+Output Format
+
+ 
+
+Print in a newline for each test case a single integer denoting the minimum number of operations required for her to make each element of array A, greater than corresponding element in array B, i.e., for each i (1<=i<=N) make Ai>=Bi.
+ 
+
+Sample Input 1
+
+ 
+
+1
+
+3
+
+2 1 1
+
+ 
+
+Sample Output 1
+
+ 
+
+2
+
+ 
+
+Explanation of Sample 1
+
+ 
+
+Initially A = [0, 0, 0]
+
+In 1st operation, she choses K = 2, so A = [1, 0, 1]
+
+In 2nd operation she choses K = 3, so A = [ 2, 1, 1]
+
+Now for each i (1<=i<=3), Ai = Bi
+
+ 
+
+
+
+/////////Q.16///////////
+Question Name: K divison
+Problem Statement
+Klaus thinks that he is a genius. Antonio wants to test Klaus’s IQ for that he asked him a problem.
+
+Given an array A of size N and an integer, K. Antonio asked Klaus to divide array A into K nonempty subsequence. Such that each element of the array should be part of exactly one subsequence. Now the Goodness of this division will be equal to
+
+Example:- For array A {2,4,3,6,1} dividing this array into two subsequence {2,4,1} and {3,6} the the Goodness of this division will be =(4-1)+(6-3)= 6.
+
+Now Antonion wants the goodness of the division to be the maximum possible.
+
+You have to help Klaus So that he remains a genius in front of Antonio.
+
+Your task is to determine the Maximum value of Goodness of the division.
+
+Note:-
+
+A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements.
+
+
+Input Format
+
+
+
+The first line contains two space-separated integers N and K.
+The second line contains N space-separated integers, the array A.
+
+
+Output Format
+
+
+
+Print the maximum value of Goodness of the division.
+
+
+Constraints
+
+
+
+1<=K<=N<=105
+1<=A[i]<=109
+
+
+Sample Input 1
+
+
+
+6 2
+
+2 4 3 6 1 3
+
+
+
+Sample Output 1
+
+
+
+7
+
+
+
+Explanation of Sample 1
+
+
+
+For test case 1
+
+For getting maximum goodness one of the possible division is {2,4,3}, {6,1,3}
+
+And goodness = (4-2)+(6-1)=7
+
+
+
+
+
+/////////////Q.16////////
+MODULATING THE ARRAY
+Problem Statement
+Amy has an array A, of N integers. She also has an integer K, such that 0 <= K <= MIN (A1, A2, …, AN). Here MIN denotes the Minimum of the array.
+
+She wants to “modulate” the array with positive integer M. “Modulating” an array with M, for each i between 1 to N, she converts Ai = (Ai – K) % M.
+
+For example, if N = 3, K = 1 and A = [ 2, 5, 3] then after modulating the array with M = 2 it becomes A = [ 1, 0, 0].
+
+She was given Q queries. In each query she has index of the array A, X and Y (1<=X, Y<=N, X may be equal to Y) and is ask to find how many positive values of M exists such that after modulating the array with M, AX becomes equal to AY. If infinite such values of M exists print -1.
+
+Since she is busy in her job interview, she asks you to help her answer the queries.
+
+NOTE: Queries are independent of each other.
+
+
+
+Constraints
+
+
+
+1 <= N <= 105
+1 <= Ai <= 109
+0 <= K <= MIN (A1, A2, …, AN)
+1 <= Q <= 50
+1 <= X, Y <= N
+All input values are integers.
+
+
+Input Format
+
+
+
+First-line contains three space separated integers N, K and Q.
+Second line contains N space separated integers denoting the array A.
+Next Q lines each contains two space separated integers X and Y.
+
+
+Output Format
+
+
+
+Print in a newline for each query a single integer denoting how many positive values of M exists such that after modulating the array with M, AX becomes equal to AY. If infinite such values of M exists print -1.
+
+
+Sample Input 1
+
+
+
+3 1 2
+
+2 5 3
+
+2 3
+
+1 1
+
+
+
+Sample Output 1
+
+
+
+2
+
+-1
+
+
+
+Explanation of Sample 1
+
+
+
+For 1st query M = 1, 2 are possible values. Considering M = 1, A = [ 0, 0, 0], M = 2 is shown in the statement.
+
+
+////////////Q.17////////////////////////
+DIVISIBILITY BY K
+Problem Statemen
+Amy has an array A of N integers.
+
+In one operation she can select a non-empty subsequence of array A and increase or decrease each element of the array by 1.
+
+Find the minimum number of operations she needs to make each element of the array A, divisible by K.
+
+You are given T independent test cases.
+
+
+
+Constraints
+
+
+
+1 <= T <= 10
+1 <= N <= 105
+2 <= K <= 105
+0 <= Ai <= 109
+All input values are integers.
+
+
+Input Format
+
+
+
+First-line contains T.
+First line of each test case consists of two space separated integers N and K.
+Second line of each test case has N space separated integers denoting the array A.
+
+
+Output Format
+
+
+
+Print in a newline for each test case a single integer denoting the minimum number of operations she needs to make each element of the array divisible by K.
+
+
+Sample Input 1
+
+
+
+1
+
+4 3
+
+4 3 6 2
+
+
+
+Sample Output 1
+
+
+
+2
+
+
+
+Explanation of Sample 1
+
+
+
+She selects the subsequence, {A1, A3} and decrease each by 1. So, A = [3, 3, 5, 2]
+
+Then, she selects the subsequence, {A3, A4} and increase each by 1. So, A = [3, 3, 6, 3]
+
+Now each element of the array is divisible by 3.
+
+
+//////////Q.18/////////////////
+Question Name: Antonio’s Store
+Problem Statement
+Antonio is a very successful businessman. Recently he bought a basketball Store. In the basketball Store, there are N containers, where each container can store at most K basketballs.
+
+Initially ith. container contains A[i] balls. Now he bought M more basketballs from somewhere and wants to store them in these containers. He can store the jth ball (1<=j<=M) in any container. He cannot remove initial balls from the container.
+
+Your task is to determine the minimum capacity K such he can store all the additional M balls into the containers.
+
+
+
+Input Format
+
+
+
+The first line contains two space-separated integers N and M.
+The second line contains N space-separated integers, the array A.
+
+
+Output Format
+
+
+
+Print the minimum capacity K for that Antonio can store all the additional M balls into the containers
+
+
+Constraints
+
+
+
+1<=N<=105
+1<=A[i],M<=109.
+
+
+Sample Input 1
+
+
+
+3 4
+
+1 2 3
+
+
+
+Sample Output 1
+
+
+
+4
+
+
+
+Explanation of Sample 1
+
+
+
+For the given test case, we can set K=4 and then
+
+Add 2 more basketballs in the first.
+Add 2 more basketballs in the second
+
+
