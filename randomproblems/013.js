@@ -9,7 +9,7 @@
 function smallestChar(string, k){
     var charOrder = 1000
     var position = -1
-    for(var i = 0; i < string.length && i < k; i++){
+    for(var i = 0; i < string.length && i <= k; i++){
         if(string.charCodeAt(i) < charOrder){
             charOrder = string.charCodeAt(i)
             position = i
