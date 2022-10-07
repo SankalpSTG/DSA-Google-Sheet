@@ -12,12 +12,18 @@ function solve(){
 }
 
 //This function parses raw input into useful data structure
-function driver(){
-    
+function driver(lines){
+    var arr = lines[0].split(" ")
+    var jewels = arr[0]
+    var stones = arr[1]
+    console.log(`jewels : ${jewels} & stones : ${stones}`)
 }
 
 //This function is responsible to take input from console
 rl.on("line", (input) => {
     lines.push(input)
+    rl.close()
+    driver(lines)
 })
 
+var x = "bB bbbbaAA"
