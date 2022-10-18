@@ -1,5 +1,3 @@
-
-
 var readline = require('readline');
 const { stdin, stdout } = require('node:process');
 const rl = readline.createInterface({ input: stdin, output:stdout });
@@ -95,6 +93,7 @@ function driver(lines){
     var arr = lines[1].split(" ").map(Number)
     console.log(solve(n, arr))
 }
+
 rl.on("line", (input) => {
     lines.push(input)
     if(lines.length == 2){

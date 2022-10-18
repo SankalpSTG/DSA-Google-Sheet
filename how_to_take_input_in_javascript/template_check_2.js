@@ -7,29 +7,24 @@ var lines = []
 
 
 //This function only solves the problem with given input
-function solve(){
-
+function solve(arr, n){
+    console.log(arr, n)
 }
 
 //This function parses raw input into useful data structure
 function driver(lines){
-    var arr = lines[0].split(" ")
-    console.log(arr)
-    var jewels = arr[2].split("\"")
-    console.log(jewels)
-    var stones = arr[5].split("\"")
-    console.log(stones)
-    jewels = jewels[1]
-    stones = stones[1]
-    // var jewels = arr[0]
-    // var stones = arr[1]
-    console.log(`jewels : ${jewels} & stones : ${stones}`)
+    var n = Number(lines[0])
+    if(lines.length < n + 1) return
+    var arr = []
+    for(var i = 1; i < lines.length; i++){
+        arr.push(lines[i].split(" ").map(Number))
+    }
+    solve(arr, n)
 }
 
 //This function is responsible to take input from console
 rl.on("line", (input) => {
     lines.push(input)
-    rl.close()
     driver(lines)
 })
 
